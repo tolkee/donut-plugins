@@ -78,7 +78,7 @@ export function renderComment(report: Report): string {
 }
 
 async function changedFiles(base: string): Promise<string[]> {
-  const { stdout } = await promisify(execFile)("git", ["diff", "--name-only", `${base}...HEAD`], { cwd: ROOT });
+  const { stdout } = await promisify(execFile)("git", ["-c", `safe.directory=${ROOT}`, "diff", "--name-only", `${base}...HEAD`, "--"], { cwd: ROOT });
   return stdout.split("\n").filter(Boolean);
 }
 
