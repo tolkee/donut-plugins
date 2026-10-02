@@ -1,0 +1,11 @@
+{
+  "extends": "./kit/tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["kit/types", "kit/sdk/src", "kit/ui/src", "kit/protocol/src", "template/src", "plugins/*/src", "scripts", "vitest.config.ts"]
+}

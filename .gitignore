@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.dev-index/
+.sign/
+comment.md
+pr-number.txt
+*.log
+.DS_Store

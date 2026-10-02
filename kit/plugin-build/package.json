@@ -1,0 +1,18 @@
+{
+  "name": "@donut/plugin-build",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "donut-plugin": "src/cli.ts"
+  },
+  "main": "src/build.ts",
+  "dependencies": {
+    "@donut/protocol": "workspace:*",
+    "@donut/sdk": "workspace:*",
+    "vite": "~7.3.6"
+  },
+  "devDependencies": {
+    "react": "^19.3.0"
+  }
+}

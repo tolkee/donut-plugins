@@ -1,0 +1,19 @@
+{
+  "name": "donut-plugin-hello",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A minimal Donut plugin: a window, a status item, two tools and a skill. Copy this folder to start yours.",
+  "scripts": {
+    "build": "donut-plugin build",
+    "check": "donut-plugin check"
+  },
+  "dependencies": {
+    "@donut/sdk": "workspace:*",
+    "@donut/ui": "workspace:*",
+    "react": "^19.3.0"
+  },
+  "devDependencies": {
+    "@donut/plugin-build": "workspace:*"
+  }
+}

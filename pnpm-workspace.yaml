@@ -1,0 +1,13 @@
+packages:
+  - kit/*
+  - plugins/*
+  - template
+onlyBuiltDependencies: []
+ignoredBuiltDependencies:
+  - esbuild
+strictDepBuilds: true
+minimumReleaseAge: 1440
+overrides:
+  nanoid@<3.3.18: ^3.3.18
+  nanoid@>=4 <5.1.16: ^5.1.16
+  lodash-es@<4.18.0: ^4.18.0
