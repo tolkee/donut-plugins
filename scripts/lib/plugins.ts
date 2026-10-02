@@ -1,7 +1,7 @@
-import { readFile, readdir, stat } from "node:fs/promises";
+import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 
-import { type Built, MAX_BUNDLE_BYTES, buildPlugin, checkManifest } from "@donut/plugin-build";
+import { BUNDLE_FILE, type Built, MAX_BUNDLE_BYTES, buildPlugin, checkManifest } from "@donut/plugin-build";
 import type { MarketplaceEntry, PluginManifest } from "@donut/protocol";
 
 import { compareVersions, isVersion, sha256 } from "./index.ts";
@@ -92,6 +92,8 @@ export async function buildOne(plugin: PluginFolder, root = ROOT): Promise<Built
   const built = await buildPlugin(plugin.dir, distOf(plugin.id, root));
   const bytes = await readFile(built.path);
   if (sha256(bytes) !== built.sha256) throw new Error(`${plugin.id}: the bundle changed on disk while building`);
+  await mkdir(join(plugin.dir, DIST_DIR), { recursive: true });
+  await writeFile(join(plugin.dir, DIST_DIR, BUNDLE_FILE), bytes);
   const problemsAfter = manifestProblems(plugin, built.manifest);
   if (problemsAfter.length > 0) throw new Error(`${plugin.id}: ${problemsAfter.join("; ")}`);
   return { ...built, id: plugin.id, bytes, warnings: bundleWarnings(JSON.parse(bytes.toString("utf8")) as { files: Record<string, string> }) };
