@@ -7,6 +7,8 @@
     "node": ">=24.11"
   },
   "scripts": {
+    "build": "node scripts/build.ts",
+    "check": "node scripts/build.ts --check",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p kit/plugin-build/tsconfig.json --noEmit",
     "audit": "pnpm audit --prod",
