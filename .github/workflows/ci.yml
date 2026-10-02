@@ -25,7 +25,7 @@ jobs:
           persist-credentials: false
       - run: corepack enable
       - id: install
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --ignore-scripts
       - run: node scripts/verify-kit.ts
       - run: pnpm typecheck
       - run: pnpm test

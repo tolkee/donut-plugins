@@ -12,7 +12,11 @@
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p kit/plugin-build/tsconfig.json --noEmit",
     "audit": "pnpm audit --prod",
-    "verify-kit": "node scripts/verify-kit.ts"
+    "verify-kit": "node scripts/verify-kit.ts",
+    "sign-index": "node scripts/sign-index.ts",
+    "yank": "node scripts/yank.ts",
+    "dev-index": "node scripts/dev-index.ts",
+    "keygen": "node scripts/keygen.ts"
   },
   "devDependencies": {
     "@donut/plugin-build": "workspace:*",
