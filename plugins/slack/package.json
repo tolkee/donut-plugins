@@ -1,0 +1,21 @@
+{
+  "name": "donut-plugin-slack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read Slack channels, DMs and threads, search, unreads; post and react as the user after their yes.",
+  "main": "src/index.tsx",
+  "scripts": {
+    "build": "donut-plugin build",
+    "check": "donut-plugin check"
+  },
+  "dependencies": {
+    "@donut/sdk": "workspace:*",
+    "@donut/ui": "workspace:*",
+    "lucide-react": "^1.49.0",
+    "react": "^19.3.0"
+  },
+  "devDependencies": {
+    "@donut/plugin-build": "workspace:*"
+  }
+}
