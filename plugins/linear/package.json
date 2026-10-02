@@ -1,0 +1,21 @@
+{
+  "name": "donut-plugin-linear",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Linear issues and projects in Donut: search, read, create, update and comment.",
+  "main": "src/index.tsx",
+  "scripts": {
+    "build": "donut-plugin build",
+    "check": "donut-plugin check"
+  },
+  "dependencies": {
+    "@donut/sdk": "workspace:*",
+    "@donut/ui": "workspace:*",
+    "lucide-react": "^1.49.0",
+    "react": "^19.3.0"
+  },
+  "devDependencies": {
+    "@donut/plugin-build": "workspace:*"
+  }
+}

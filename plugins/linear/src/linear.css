@@ -1,0 +1,46 @@
+.ln-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.ln-bar {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--dn-border);
+}
+
+.ln-body {
+  flex: 1;
+  min-height: 0;
+  padding: 12px;
+}
+
+.ln-issue {
+  flex: 1;
+  min-height: 0;
+}
+
+.ln-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 16px;
+  align-items: center;
+}
+
+.ln-comment {
+  padding: 8px 10px;
+  border: 1px solid var(--dn-border);
+  border-radius: var(--dn-radius-sm);
+}
+
+.ln-project {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--dn-border);
+}
+
+.ln-pop {
+  width: 380px;
+  max-height: 460px;
+  overflow: auto;
+}
