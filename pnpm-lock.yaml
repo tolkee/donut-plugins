@@ -108,6 +108,25 @@ importers:
         specifier: workspace:*
         version: link:../../kit/plugin-build
 
+  plugins/slack:
+    dependencies:
+      '@donut/sdk':
+        specifier: workspace:*
+        version: link:../../kit/sdk
+      '@donut/ui':
+        specifier: workspace:*
+        version: link:../../kit/ui
+      lucide-react:
+        specifier: ^1.49.0
+        version: 1.49.0(@types/react@19.3.0)(react@19.3.0)
+      react:
+        specifier: ^19.3.0
+        version: 19.3.0
+    devDependencies:
+      '@donut/plugin-build':
+        specifier: workspace:*
+        version: link:../../kit/plugin-build
+
   template:
     dependencies:
       '@donut/sdk':
